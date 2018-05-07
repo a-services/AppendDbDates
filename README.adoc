@@ -1,0 +1,22 @@
+= AppendDbDates
+:appVersion: 1.00
+
+Utility to append `_createdAt` and `_updatedAt` dates to CSV files exported from
+link:https://appery.io[Appery.io] DB.
+
+- Place `append-db-dates-{appVersion}.jar` and `AppendDbDates.properties` to some local folder.
+
+- Export your database in CSV format and expand it to your local folder. +
+Set `csv_export_folder` in `AppendDbDates.properties` to the name of this folder.
+
+- Create an empty folder where output files should be placed. +
+Set `csv_output_foler` in `AppendDbDates.properties` to the name of this folder.
+
+- Set `db_id` and `master_key` properties to database id and master key of your DB, they can be found at "Settings" page in
+link:https://appery.io[Appery.io].
+
+Run the utility in command line:
+
+`java -cp append-db-dates-{appVersion}.jar io.appery.dbdates.dd AppendDbDates.properties`
+
+NOTE: link:https://java.com[Java] should be installed on your computer to run this utility.
